@@ -11,10 +11,8 @@
         <input
           class="btn"
           type="submit"
-          value="buscar"
+          value="Buscar CEP"
         />
-
-        <error :error="error"/>
 
       </div>
     </form>
@@ -22,13 +20,18 @@
       class="card"
       :cep-information="dataFromCepSearch"
     />
+    <modal
+      :show-data="showModal"
+      :message="'Digite um CEP válido!'"
+      @close="showModal = $event"
+      :modal-title="'Erro'"/>
   </div>
 </template>
 
 <script>
 import { createNamespacedHelpers } from 'vuex';
 import displayData from './display-data.vue';
-import error from './error.vue';
+import modal from './modal.vue';
 
 const { mapState, mapActions } = createNamespacedHelpers('search');
 
@@ -37,7 +40,7 @@ export default {
   data() {
     return {
       cep: null,
-      error: {},
+      showModal: false,
     };
   },
   computed: {
@@ -50,24 +53,19 @@ export default {
       'getCepSearch',
     ]),
     formValidate(data) {
-      if (!this.cep || this.cep.length < 8) {
-        this.error = {
-          message: '* O cep precisa ter pelo menos 9 caracteres',
-        };
+      console.log(data);
+      if (!this.cep || this.cep.length < 7) {
+        this.showModal = true;
         return false;
       }
-      this.error = {};
+      this.showModal = false;
       this.getCepSearch(data);
       return true;
     },
   },
   components: {
     displayData,
-    error,
+    modal,
   },
 };
 </script>
-
-<style>
-
-</style>

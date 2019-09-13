@@ -1,9 +1,9 @@
 <template>
-  <div class="wrapper-error" v-if="error && error.message">
+  <div class="wrapper-error">
     <label
       class="error search-error"
       for="search"
-    >{{ error.message }}
+    >{{ errorMessage }}
     </label>
   </div>
 </template>
@@ -12,9 +12,10 @@
 export default {
   name: 'error',
   props: {
-    error: {
-      type: Object,
+    errorMessage: {
+      type: String,
       required: true,
+      default: 'Verifique o campo',
     },
   },
 };

@@ -1,0 +1,52 @@
+.wrapper-modal {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	z-index: 1;
+	width: 100%;
+	min-height: 100vh;
+	font-size: 1rem;
+	background-color: $modal-bg;
+}
+
+.wrapper-modal.active {
+	display: block;
+}
+
+.modal {
+	position: fixed;
+	top: 10vh;
+	right: 0;
+	left: 0;
+	width: 80%;
+	min-height: 200px;
+	margin: auto;
+	background-color: #fff;
+}
+
+.modal-content,
+.modal header {
+	padding-top: 0.5em;
+	padding-right: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 0.5em;
+}
+
+.modal header {
+  position: relative;
+	color: #ffffff;
+	background-color: $main-background-color;
+  border-bottom: 1px solid #cccccc;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.modal header .close {
+  cursor: pointer;
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+}
