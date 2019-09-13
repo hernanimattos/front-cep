@@ -11,10 +11,14 @@ export default new Vuex.Store({
       namespaced: true,
       state: {
         dataFromCepSearch: {},
+        noResult: null,
       },
       mutations: {
         setDataFromCepSearch(state, data) {
           state.dataFromCepSearch = data;
+        },
+        setNoResult(state, data) {
+          state.noResult = data;
         },
       },
       actions: {
@@ -37,6 +41,9 @@ export default new Vuex.Store({
           }).then((res) => {
             const { data } = res;
             const { cep } = data;
+            const { cep: cepValue } = cep;
+
+            commit('setNoResult', !cepValue);
             commit('setDataFromCepSearch', { ...cep });
           });
         },

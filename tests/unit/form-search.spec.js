@@ -49,6 +49,7 @@ describe('formSearch.vue', () => {
     const data = { cep: 'eee' };
     expect(vm.formValidate(data)).toBe(false);
     expect(vm.getCepSearch).not.toHaveBeenCalled();
+    expect(wrapper.contains(modal)).toBeTruthy();
   });
 
   it('check execute formValidate with cep treu', () => {
@@ -57,9 +58,5 @@ describe('formSearch.vue', () => {
     const data = { cep: 'eee' };
     expect(vm.formValidate(data)).toBe(true);
     expect(vm.getCepSearch).toHaveBeenCalledWith(data);
-  });
-
-  it('check if use modal', () => {
-    expect(wrapper.contains(modal)).toBeTruthy();
   });
 });
