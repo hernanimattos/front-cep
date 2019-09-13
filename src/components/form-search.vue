@@ -25,6 +25,7 @@
       :cep-information="dataFromCepSearch"
     />
     <modal
+      v-if="showModal"
       :show-data="showModal"
       :message="'Digite um CEP válido!'"
       @close="showModal = $event"
