@@ -6,10 +6,16 @@
     "serve": "vue-cli-service serve --watch",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "test:e2e": "jest --config=jest.e2e.config.js --runInBand",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "apollo-boost": "^0.4.4",
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-client": "^2.6.4",
+    "apollo-link": "^1.2.13",
+    "apollo-link-context": "^1.0.19",
+    "apollo-link-http": "^1.5.16",
     "core-js": "^2.6.5",
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
@@ -26,11 +32,16 @@
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "jest": "^24.8.0",
+    "jest-puppeteer": "^4.2.0",
     "node-sass": "^4.9.0",
+    "puppeteer": "^1.17.0",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-jest-puppeteer": "^0.1.2",
     "vue-template-compiler": "^2.6.10"
   }
 }
