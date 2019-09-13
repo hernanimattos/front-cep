@@ -3,7 +3,10 @@ describe('your Vue app', () => {
     await page.goto('http://localhost:8080');
   });
 
-  it('can be tested with jest and puppeteer', async () => {
-    await expect(page).toMatchElement('h1', 'HelloWorld');
+  it('check form and elements', async () => {
+    await expect(page).toMatchElement('form');
+    await expect(page).toMatchElement('input', 'Buscar Cep');
+    await expect(page).toMatchElement('input[type="search"]');
+    await expect(page).toMatchElement('section.wrapper-modal');
   });
 });
