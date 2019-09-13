@@ -39,8 +39,6 @@ export default new Vuex.Store({
             const { cep } = data;
             commit('setDataFromCepSearch', { ...cep });
           });
-
-          return params;
         },
       },
     },

@@ -13,7 +13,6 @@ describe('modal.vue', () => {
       },
     });
     vm = wrapper.vm; // eslint-disable-line
-    vm.$emit = jest.fn();
   });
 
   it('renders props.errorMessage when passed', () => {

@@ -39,7 +39,6 @@ export default {
   methods: {
     close(e) {
       if (e.target.classList.contains('active') || e.target.classList.contains('close')) {
-        console.log(e.target.classList, 'target');
         this.$emit('close', !this.showData);
       }
     },

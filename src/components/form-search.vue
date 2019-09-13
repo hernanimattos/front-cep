@@ -53,7 +53,6 @@ export default {
       'getCepSearch',
     ]),
     formValidate(data) {
-      console.log(data);
       if (!this.cep || this.cep.length < 7) {
         this.showModal = true;
         return false;
