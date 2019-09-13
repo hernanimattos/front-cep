@@ -1,5 +1,7 @@
 <template>
-  <div class="list-item" v-if="cepInformation && cepInformation.cep">
+  <div
+    class="list-item"
+    v-if="cepInformation && cepInformation.cep">
     <p><strong>CEP: </strong>{{cepInformation.cep}}</p>
     <p><strong>Estado: </strong>{{cepInformation.uf}}</p>
     <p><strong>Cidade: </strong>{{cepInformation.localidade}}</p>
@@ -22,6 +24,5 @@ export default {
 <style lang="scss" scoped>
 .list-item {
   text-align: left;
-
 }
 </style>

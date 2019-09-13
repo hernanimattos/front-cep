@@ -1,15 +1,24 @@
 <template>
-  <section class="wrapper-modal" :class="{ active: showData}" @click="close($event)">
-    <div class="container-modal">
-      <div class="modal">
+  <section
+    class="wrapper-modal"
+    :class="{ active: showData}"
+    @click="close($event)">
+    <div
+      class="container-modal">
+      <div
+        class="modal">
         <header>
-          <div class="modal-header__title">
+          <div
+            class="modal-header__title">
             <p>{{ modalTitle }}</p>
           </div>
-          <span class="close">X</span>
+          <span
+            class="close">X</span>
         </header>
-        <article class="modal-content">
-          <error :error-message="message" />
+        <article
+          class="modal-content">
+          <error
+            :error-message="message" />
         </article>
       </div>
     </div>

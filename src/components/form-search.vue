@@ -1,7 +1,11 @@
 <template>
-  <div class="form-search" >
-    <form class="card" @submit.prevent="formValidate($data)">
-      <div class="wrapper-input">
+  <div
+    class="form-search" >
+    <form
+      class="card"
+      @submit.prevent="formValidate($data)">
+      <div
+        class="wrapper-input">
         <the-mask
           mask="#####-###"
           type="search"

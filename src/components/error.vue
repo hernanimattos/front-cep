@@ -1,5 +1,6 @@
 <template>
-  <div class="wrapper-error">
+  <div
+    class="wrapper-error">
     <label
       class="error search-error"
       for="search"
@@ -20,7 +21,3 @@ export default {
   },
 };
 </script>
-
-<style>
-
-</style>

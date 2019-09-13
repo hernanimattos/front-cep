@@ -2,38 +2,15 @@
 @import './reset.scss';
 @import './components/_modal.scss';
 @import './components/_error.scss';
+@import './components/_card.scss';
+@import './components/_form.scss';
 
 body{
   background-color: #cccccc61;
   font-size: 18px;
   line-height: 1.6rem;
 }
+
 .container{
   margin: 0 auto;
-}
-
-/* Form */
-.wrapper-input {
-  position: relative;
-  display: inline-block;
-}
-
-.btn {
-  background-color: #000;
-  color: #fff;
-}
-
-input {
-  outline: #ccc 1px solid;
-  padding: 1rem;
-  margin-right: 1rem;
-}
-
-/* components */
-
-.card {
-  padding: 2rem;
-  outline: #ccc 1px solid;
-  margin: 2rem;
-  background-color: #fff
 }
