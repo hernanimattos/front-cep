@@ -38,7 +38,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "jest": "^24.8.0",
     "jest-puppeteer": "^4.2.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.13.1",
     "puppeteer": "^1.17.0",
     "sass-loader": "^7.1.0",
     "vue-cli-plugin-jest-puppeteer": "^0.1.2",
